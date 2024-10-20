@@ -11,19 +11,45 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Portfolio</title>
 </head>
-<body class="bg-lightBackground dark:bg-darkBackground dark:text-white" x-data="{isOpenMobileNav: false}">
+<body class="bg-lightBackground dark:bg-darkBackground dark:text-white transition-colors duration-100" x-data="{isOpenMobileNav: false}">
 <section>
     <!-- navbar -->
-    <nav x-data="{mode: 'dark'}" class="bg-lightForeground dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
+    <nav x-data="{isDark: false}" class="bg-lightForeground dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
+        <div class="flex items-center gap-4">
+            <div class="border flex items-center justify-center p-2 rounded-full">
+                <button @click="toggleDarkMode(); isDark = !isDark" type="button" class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground" data-hs-theme-click-value="dark">
+                  <span x-show="!isDark" class="group inline-flex shrink-0 justify-center items-center size-9">
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                  </span>
+                </button>
+                <button @click="toggleDarkMode(); isDark = !isDark" type="button" class="font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-theme-click-value="light">
+                  <span x-show="isDark" class="group inline-flex shrink-0 justify-center items-center size-9">
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v2"></path>
+                      <path d="M12 20v2"></path>
+                      <path d="m4.93 4.93 1.41 1.41"></path>
+                      <path d="m17.66 17.66 1.41 1.41"></path>
+                      <path d="M2 12h2"></path>
+                      <path d="M20 12h2"></path>
+                      <path d="m6.34 17.66-1.41 1.41"></path>
+                      <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                  </span>
+                </button>
+            </div>
+            <h1 class="text-2xl font-bold">Portfolio</h1>
+        </div>
 
-        <h1 class="text-2xl font-bold">Portfolio</h1>
         <ul class="hidden lg:flex items-center gap-6">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Project</a></li>
             <li><a href="#">Contact</a></li>
-            <li class="w-14 border rounded p-1 text-center"><button @click="mode==='dark'?mode='light':mode='dark'" onclick="toggleDarkMode()" x-text="mode"></button></li>
         </ul>
+
         <button class="lg:hidden" @click="isOpenMobileNav = true">Menu</button>
     </nav>
     <!-- mobile nav -->
