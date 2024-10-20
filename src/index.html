@@ -9,7 +9,71 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Portfolio</title>
 </head>
-<body>
-<h1>Project setup ready</h1>
+<body class="bg-lightBackground">
+<section class="min-h-screen">
+    <!-- navbar -->
+    <nav x-data="{mode: 'dark'}" class="bg-lightForeground sticky top-0 flex items-center justify-between font-poppins px-8 py-5 shadow-custom">
+
+        <h1 class="text-2xl font-bold">Portfolio</h1>
+        <ul class="flex items-center gap-6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="w-14 border rounded p-1 text-center"><button @click="mode==='dark'?mode='light':mode='dark'" onclick="toggleDarkMode()" x-text="mode"></button></li>
+        </ul>
+    </nav>
+    <!-- end navbar -->
+    <!-- hero -->
+    <div class="flex min-h-[calc(100vh-72px)] flex-wrap items-center container">
+       <div class="w-1/2 space-y-4">
+           <h1 class="text-5xl text-dark font-bold font-poppins leading-[55px]">Front-End Vue Developer</h1>
+           <p class="text-[#555555]">
+               Hi, I'm Anis Mia. A passionate Front-end Vue Developer based in Dhaka, Bangladesh.
+           </p>
+       </div>
+        <div class="w-1/2 dark:bg-gray-900 dark:text-white">
+            image
+        </div>
+        <div class="w-full flex items-center gap-4 text-mulish text-lg font-medium">
+            <h3>Technologies</h3><span>|</span>
+            <div class="w-full flex items-center gap-6">
+                <div class="card-style">
+                    <img src="./assets/programming-language-icons/html-5.svg" alt="html" class="w-10">
+                </div>
+
+              <div class="card-style">
+                  <img src="./assets/programming-language-icons/css3-plain.svg" alt="html" class="w-10">
+                  <img src="./assets/programming-language-icons/tailwind-css.svg" alt="html" class="w-10">
+                  <img src="./assets/programming-language-icons/bootstrap-plain.svg" alt="html" class="w-10">
+              </div>
+                <div class="card-style">
+                    <img src="./assets/programming-language-icons/javascript.svg" alt="html" class="w-8">
+                    <img src="./assets/programming-language-icons/vue-vuejs-javascript-js-framework.svg" alt="html" class="w-10">
+                    <img src="./assets/programming-language-icons/nuxtjs.svg" alt="html" class="w-10">
+                    <img src="./assets/programming-language-icons/Alpine.js.svg" alt="html" class="w-10">
+                </div>
+                <div class="card-style">
+                    <img src="./assets/programming-language-icons/file-type-python.svg" alt="html" class="w-10">
+                    </div>
+                <div class="card-style">
+                    <img src="./assets/programming-language-icons/figma.svg" alt="html" class="w-10">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function toggleDarkMode() {
+        const htmlElement = document.documentElement;
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+        } else {
+            htmlElement.classList.add('dark');
+        }
+    }
+</script>
 </body>
 </html>
