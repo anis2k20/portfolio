@@ -7,37 +7,85 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/custom.css">
     <title>Portfolio</title>
 </head>
-<body class="bg-lightBackground">
-<section class="min-h-screen">
+<body class="bg-lightBackground dark:bg-darkBackground dark:text-white" x-data="{isOpenMobileNav: false}">
+<section>
     <!-- navbar -->
-    <nav x-data="{mode: 'dark'}" class="bg-lightForeground sticky top-0 flex items-center justify-between font-poppins px-8 py-5 shadow-custom">
+    <nav x-data="{mode: 'dark'}" class="bg-lightForeground dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
 
         <h1 class="text-2xl font-bold">Portfolio</h1>
-        <ul class="flex items-center gap-6">
+        <ul class="hidden lg:flex items-center gap-6">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Project</a></li>
             <li><a href="#">Contact</a></li>
             <li class="w-14 border rounded p-1 text-center"><button @click="mode==='dark'?mode='light':mode='dark'" onclick="toggleDarkMode()" x-text="mode"></button></li>
         </ul>
+        <button class="lg:hidden" @click="isOpenMobileNav = true">Menu</button>
     </nav>
+    <!-- mobile nav -->
+    <div  class="lg:hidden bg-lightBackground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed  w-full h-screen"
+         :class="{'left-0': isOpenMobileNav,'-left-[820px]': !isOpenMobileNav}"
+    >
+        <div class="absolute cursor-pointer right-5 text-primary">
+            <button @click="isOpenMobileNav = !isOpenMobileNav" >close</button>
+        </div>
+        <ul class="flex items-center justify-center pt-20 flex-col gap-4 ">
+            <li @click="isOpenMobileNav = !isOpenMobileNav">
+                <a href="#" class="">
+                    Home
+                </a>
+
+            </li>
+            <li>
+                <a href="#" class="">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    Project
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <!-- end navbar -->
     <!-- hero -->
-    <div class="flex min-h-[calc(100vh-72px)] flex-wrap items-center container">
-       <div class="w-1/2 space-y-4">
-           <h1 class="text-5xl text-dark font-bold font-poppins leading-[55px]">Front-End Vue Developer</h1>
-           <p class="text-[#555555]">
-               Hi, I'm Anis Mia. A passionate Front-end Vue Developer based in Dhaka, Bangladesh.
-           </p>
+    <div class="flex flex-wrap items-center container pt-[10%] space-y-10">
+       <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
+           <div  data-aos="fade-up" data-aos-delay="50"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-out" class="w-full mx-auto lg:w-1/2 space-y-4">
+               <h1 class="text-3xl lg:text-5xl text-dark dark:text-white font-bold font-poppins leading-10 text-center lg:text-left lg:leading-[55px]">Front-End Vue Developer</h1>
+               <p class="text-[#555555] dark:text-white text-center lg:text-left">
+                   Hi, I'm Anis Mia. A passionate Front-end Vue Developer based in Dhaka, Bangladesh.
+               </p>
+               <div class="flex justify-center lg:justify-start items-center gap-4">
+
+                   <a href="#">
+                       <img src="./assets/icons/mingcute--linkedin-line.svg" alt="linkedin" class="w-8">
+                   </a>
+                   <a href="https://github.com/anis2k20">
+                       <img src="./assets/icons/mingcute--github-line.svg" alt="github" class="w-8">
+                   </a>
+               </div>
+           </div>
+           <div class="w-full lg:w-1/2 dark:text-white flex justify-center lg:justify-end items-center">
+               <img src="./assets/images/anis-photo.jpg" alt="anis-photo" class="lg:w-[50%] box rounded-full">
+           </div>
        </div>
-        <div class="w-1/2 dark:bg-gray-900 dark:text-white">
-            image
-        </div>
-        <div class="w-full flex items-center gap-4 text-mulish text-lg font-medium">
-            <h3>Technologies</h3><span>|</span>
-            <div class="w-full flex items-center gap-6">
+        <div data-aos="fade-right" data-aos-duration="1000" class="w-full flex flex-wrap lg:flex-nowrap justify-center lg:justify-start items-center gap-4 text-mulish text-lg font-medium">
+            <h3>Technologies</h3><span class="hidden lg:block">|</span>
+            <div  class="w-full flex flex-wrap justify-center lg:justify-start items-center gap-4 lg:gap-6">
                 <div class="card-style">
                     <img src="./assets/programming-language-icons/html-5.svg" alt="html" class="w-10">
                 </div>
@@ -54,10 +102,10 @@
                     <img src="./assets/programming-language-icons/Alpine.js.svg" alt="html" class="w-10">
                 </div>
                 <div class="card-style">
-                    <img src="./assets/programming-language-icons/file-type-python.svg" alt="html" class="w-10">
-                    </div>
+                    <img src="./assets/programming-language-icons/wordpress.svg" alt="html" class="w-10">
+                </div>
                 <div class="card-style">
-                    <img src="./assets/programming-language-icons/figma.svg" alt="html" class="w-10">
+                    <img src="./assets/programming-language-icons/figma.svg" alt="html" class="w-9">
                 </div>
 
 
@@ -65,6 +113,7 @@
         </div>
     </div>
 </section>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     function toggleDarkMode() {
         const htmlElement = document.documentElement;
@@ -74,6 +123,7 @@
             htmlElement.classList.add('dark');
         }
     }
+    AOS.init();
 </script>
 </body>
 </html>
