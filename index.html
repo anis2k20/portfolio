@@ -12,11 +12,12 @@
     <title>Portfolio</title>
 </head>
 <body class="bg-lightBackground dark:bg-darkBackground dark:text-white transition-colors duration-100" x-data="{isOpenMobileNav: false}">
-<section>
+<section id="home">
     <!-- navbar -->
-    <nav x-data="{isDark: false}" class="bg-lightForeground dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
+    <nav x-data="{isDark: false}"
+         class="bg-lightForeground z-50 dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-4 shadow-light-shadow">
         <div class="flex items-center gap-4">
-            <div class="border flex items-center justify-center p-2 rounded-full">
+            <div class="border flex items-center justify-center p-1 rounded-full">
                 <button @click="toggleDarkMode(); isDark = !isDark" type="button" class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground" data-hs-theme-click-value="dark">
                   <span x-show="!isDark" class="group inline-flex shrink-0 justify-center items-center size-9">
                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -44,39 +45,50 @@
         </div>
 
         <ul class="hidden lg:flex items-center gap-6">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-me">About</a></li>
             <li><a href="#">Project</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
-        <button class="lg:hidden" @click="isOpenMobileNav = true">Menu</button>
+        <button class="lg:hidden" @click="isOpenMobileNav = true">
+            <!-- codicon family -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M16 5H0V4h16zm0 8H0v-1h16zm0-4.008H0V8h16z"/>
+            </svg>
+        </button>
     </nav>
     <!-- mobile nav -->
     <div  class="lg:hidden bg-lightBackground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed  w-full h-screen"
          :class="{'left-0': isOpenMobileNav,'-left-[820px]': !isOpenMobileNav}"
     >
-        <div class="absolute cursor-pointer right-5 text-primary">
-            <button @click="isOpenMobileNav = !isOpenMobileNav" >close</button>
+        <div class="absolute cursor-pointer right-5 text-red-600">
+            <button @click="isOpenMobileNav = !isOpenMobileNav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd"
+                          d="m8 8.707l3.646 3.647l.708-.707L8.707 8l3.647-3.646l-.707-.708L8 7.293L4.354 3.646l-.707.708L7.293 8l-3.646 3.646l.707.708z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </button>
         </div>
         <ul class="flex items-center justify-center pt-20 flex-col gap-4 ">
             <li @click="isOpenMobileNav = !isOpenMobileNav">
-                <a href="#" class="">
+                <a href="#home" class="">
                     Home
                 </a>
 
             </li>
-            <li>
-                <a href="#" class="">
+            <li @click="isOpenMobileNav = !isOpenMobileNav">
+                <a href="#about-me" class="">
                     About
                 </a>
             </li>
-            <li>
+            <li @click="isOpenMobileNav = !isOpenMobileNav">
                 <a href="#" class="">
                     Project
                 </a>
             </li>
-            <li>
+            <li @click="isOpenMobileNav = !isOpenMobileNav">
                 <a href="#" class="">
                     Contact
                 </a>
@@ -86,7 +98,7 @@
 
     <!-- end navbar -->
     <!-- hero -->
-    <div class="flex flex-wrap items-center container pt-[10%] space-y-10">
+    <div class="flex  flex-wrap space-y-10 justify-between items-center container py-[5%]">
        <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
            <div  data-aos="fade-up" data-aos-delay="50"
                  data-aos-duration="1000"
@@ -105,8 +117,8 @@
                    </a>
                </div>
            </div>
-           <div class="w-full lg:w-1/2 dark:text-white flex justify-center lg:justify-end items-center">
-               <img src="./assets/images/anis-photo.jpg" alt="anis-photo" class="lg:w-[50%] box rounded-full">
+           <div class="w-full lg:w-1/2 hero-image dark:text-white flex justify-center lg:justify-end items-center">
+               <img src="./assets/images/anis-photo.jpg" alt="anis-photo">
            </div>
        </div>
         <div data-aos="fade-right" data-aos-duration="1000" class="w-full flex flex-wrap lg:flex-nowrap justify-center lg:justify-start items-center gap-4 text-mulish text-lg font-medium">
@@ -134,7 +146,39 @@
                     <img src="./assets/programming-language-icons/figma.svg" alt="html" class="w-9">
                 </div>
 
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- About Me -->
+<section id="about-me">
+    <div class="py-20 lg:py-36 bg-lightForeground dark:bg-darkForeground">
+        <div class="container">
+            <div class="flex justify-between flex-wrap md:flex-nowrap gap-10">
+                <div data-aos="fade-up" data-aos-duration="1000"
+                     class="w-80 z-10 mx-auto flex-shrink-0 border-double border-4 rounded-lg  h-80 relative border-slate-400">
+                    <img class="absolute left-1/2 z-10 -translate-x-1/2 bottom-0 h-96 rounded-lg"
+                         src="./assets/images/about-me.png" alt="">
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="1000" class="space-y-4 text-center md:text-left">
+                    <h2 class="text-2xl lg:text-4xl font-bold text-dark dark:text-white">
+                        <p class="text-primary font-medium font-poppins text-lg">ABOUT ME</p>
+                        Front-end Developer
+                        based in Dhaka, Bangladesh
+                    </h2>
+                    <p class="font-mulish text-slate-500 dark:text-slate-300">Hey, my name is Anis Mia, and I'm a
+                        Frontend Developer.
+                        My passion is to create and develop a clean UI/UX for my users.
+                        My main stack currently is Vue.js in combination with Tailwind CSS and TypeScript.</p>
+                    <div class="flex pt-4 justify-center md:justify-start gap-4 font-poppins font-medium">
+                        <a href="./assets/pdf/front-end-cv.pdf" class="bg-primary text-white px-4 py-3 rounded-lg">Download
+                            CV</a>
+                        <a href="tel:+8801614637972" class="border-2 border-primary text-primary px-4 py-3 rounded-lg">Contact
+                            Me</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
