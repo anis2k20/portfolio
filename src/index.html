@@ -14,7 +14,7 @@
 <body class="bg-lightBackground dark:bg-darkBackground dark:text-white transition-colors duration-100" x-data="{isOpenMobileNav: false}">
 <section>
     <!-- navbar -->
-    <nav x-data="{isDark: false}" class="bg-lightForeground dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
+    <nav x-data="{isDark: false}" class="bg-lightForeground z-20 dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-5 shadow-light-shadow">
         <div class="flex items-center gap-4">
             <div class="border flex items-center justify-center p-2 rounded-full">
                 <button @click="toggleDarkMode(); isDark = !isDark" type="button" class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground" data-hs-theme-click-value="dark">
@@ -86,7 +86,7 @@
 
     <!-- end navbar -->
     <!-- hero -->
-    <div class="flex flex-wrap items-center container pt-[10%] space-y-10">
+    <div class="flex flex-wrap items-center container pt-[5%] space-y-10">
        <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
            <div  data-aos="fade-up" data-aos-delay="50"
                  data-aos-duration="1000"
@@ -105,8 +105,8 @@
                    </a>
                </div>
            </div>
-           <div class="w-full lg:w-1/2 dark:text-white flex justify-center lg:justify-end items-center">
-               <img src="./assets/images/anis-photo.jpg" alt="anis-photo" class="lg:w-[50%] box rounded-full">
+           <div class="w-full lg:w-1/2 hero-image dark:text-white flex justify-center lg:justify-end items-center">
+               <img src="./assets/images/anis-photo.jpg" alt="anis-photo">
            </div>
        </div>
         <div data-aos="fade-right" data-aos-duration="1000" class="w-full flex flex-wrap lg:flex-nowrap justify-center lg:justify-start items-center gap-4 text-mulish text-lg font-medium">
