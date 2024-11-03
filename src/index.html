@@ -47,7 +47,7 @@
         <ul class="hidden lg:flex items-center gap-6">
             <li><a href="#home">Home</a></li>
             <li><a href="#about-me">About</a></li>
-            <li><a href="#">Project</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
@@ -84,7 +84,7 @@
                 </a>
             </li>
             <li @click="isOpenMobileNav = !isOpenMobileNav">
-                <a href="#" class="">
+                <a href="#project" class="">
                     Project
                 </a>
             </li>
@@ -179,6 +179,44 @@
                             Me</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project">
+    <div class="py-20 lg:py-20 bg-lightBackground dark:bg-darkBackground">
+        <div class="container flex items-center gap-4 lg:gap-0 justify-between flex-wrap">
+            <div data-aos="fade-up" class="w-full ext-slate-500 dark:text-slate-300 order-2 lg:order-1 lg:w-1/2 lg:pr-4 font-mulish space-y-2 text-base ">
+                <h2 class="font-poppins text-xl md:text-2xl font-bold text-dark dark:text-white">Zerdeli.app - Education
+                    Platform</h2>
+                <div>
+                    <h6>Location: Kazakhstan</h6>
+                    <h6>Role: Frontend Developer</h6>
+                </div>
+                <p class="text-justify">
+                    Zerdeli is an innovative education platform aimed at transforming the learning experience for
+                    students in Kazakhstan. Focused on creating a seamless and engaging environment, Zerdeli brings
+                    together educators, learners, and technology in a unified platform.
+                </p>
+
+                <h3 class="font-bold">Tools & Technologies:</h3>
+                <ul class="list-style list-disc list-inside">
+                    <li>Frontend Framework: Vue.js (Composition API)</li>
+                    <li> Styling: Tailwind CSS</li>
+                    <li> State Management: Pinia</li>
+                    <li>Version Control: Git</li>
+                </ul>
+                <p class="text-justify">
+                    As part of the frontend team, I contribute to building responsive, interactive interfaces,
+                    optimizing the user experience, and ensuring smooth functionality across devices.
+                </p>
+            </div>
+            <div data-aos="fade-up" class="order-1 lg:order-2 w-full lg:w-1/2 space-y-4 lg:pl-4"><img
+                    src="./assets/images/zerdeli.png" alt="project-image" class="w-full rounded-lg">
+                <a href="https://zerdeli.app" target="_blank"
+                   class="bg-primary text-white px-4 py-3 rounded-lg block font-mulish w-32 mx-auto text-white text-center">Live
+                    Demo</a>
             </div>
         </div>
     </div>
