@@ -47,7 +47,7 @@
         <ul class="hidden lg:flex items-center gap-6">
             <li><a href="#home">Home</a></li>
             <li><a href="#about-me">About</a></li>
-            <li><a href="#">Project</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
@@ -60,7 +60,7 @@
     </nav>
     <!-- mobile nav -->
     <div  class="lg:hidden bg-lightBackground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed  w-full h-screen"
-         :class="{'left-0': isOpenMobileNav,'-left-[820px]': !isOpenMobileNav}"
+          :class="{'left-0': isOpenMobileNav,'-left-[820px]': !isOpenMobileNav}"
     >
         <div class="absolute cursor-pointer right-5 text-red-600">
             <button @click="isOpenMobileNav = !isOpenMobileNav">
@@ -84,7 +84,7 @@
                 </a>
             </li>
             <li @click="isOpenMobileNav = !isOpenMobileNav">
-                <a href="#" class="">
+                <a href="#project" class="">
                     Project
                 </a>
             </li>
@@ -99,28 +99,28 @@
     <!-- end navbar -->
     <!-- hero -->
     <div class="flex  flex-wrap space-y-10 justify-between items-center container py-[5%]">
-       <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
-           <div  data-aos="fade-up" data-aos-delay="50"
-                 data-aos-duration="1000"
-                 data-aos-easing="ease-in-out" class="w-full mx-auto lg:w-1/2 space-y-4">
-               <h1 class="text-3xl lg:text-5xl text-dark dark:text-white font-bold font-poppins leading-10 text-center lg:text-left lg:leading-[55px]">Front-End Vue Developer</h1>
-               <p class="text-[#555555] dark:text-white text-center lg:text-left">
-                   Hi, I'm Anis Mia. A passionate Front-end Vue Developer based in Dhaka, Bangladesh.
-               </p>
-               <div class="flex justify-center lg:justify-start items-center gap-4">
+        <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
+            <div  data-aos="fade-up" data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out" class="w-full mx-auto lg:w-1/2 space-y-4">
+                <h1 class="text-3xl lg:text-5xl text-dark dark:text-white font-bold font-poppins leading-10 text-center lg:text-left lg:leading-[55px]">Front-End Vue Developer</h1>
+                <p class="text-[#555555] dark:text-white text-center lg:text-left">
+                    Hi, I'm Anis Mia. A passionate Front-end Vue Developer based in Dhaka, Bangladesh.
+                </p>
+                <div class="flex justify-center lg:justify-start items-center gap-4">
 
-                   <a href="#">
-                       <img src="./assets/icons/mingcute--linkedin-line.svg" alt="linkedin" class="w-8">
-                   </a>
-                   <a href="https://github.com/anis2k20">
-                       <img src="./assets/icons/mingcute--github-line.svg" alt="github" class="w-8">
-                   </a>
-               </div>
-           </div>
-           <div class="w-full lg:w-1/2 hero-image dark:text-white flex justify-center lg:justify-end items-center">
-               <img src="./assets/images/anis-photo.jpg" alt="anis-photo">
-           </div>
-       </div>
+                    <a href="#">
+                        <img src="./assets/icons/mingcute--linkedin-line.svg" alt="linkedin" class="w-8">
+                    </a>
+                    <a href="https://github.com/anis2k20">
+                        <img src="./assets/icons/mingcute--github-line.svg" alt="github" class="w-8">
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 hero-image dark:text-white flex justify-center lg:justify-end items-center">
+                <img src="./assets/images/anis-photo.jpg" alt="anis-photo">
+            </div>
+        </div>
         <div data-aos="fade-right" data-aos-duration="1000" class="w-full flex flex-wrap lg:flex-nowrap justify-center lg:justify-start items-center gap-4 text-mulish text-lg font-medium">
             <h3>Technologies</h3><span class="hidden lg:block">|</span>
             <div  class="w-full flex flex-wrap justify-center lg:justify-start items-center gap-4 lg:gap-6">
@@ -128,11 +128,11 @@
                     <img src="./assets/programming-language-icons/html-5.svg" alt="html" class="w-10">
                 </div>
 
-              <div class="card-style">
-                  <img src="./assets/programming-language-icons/css3-plain.svg" alt="html" class="w-10">
-                  <img src="./assets/programming-language-icons/tailwind-css.svg" alt="html" class="w-10">
-                  <img src="./assets/programming-language-icons/bootstrap-plain.svg" alt="html" class="w-10">
-              </div>
+                <div class="card-style">
+                    <img src="./assets/programming-language-icons/css3-plain.svg" alt="html" class="w-10">
+                    <img src="./assets/programming-language-icons/tailwind-css.svg" alt="html" class="w-10">
+                    <img src="./assets/programming-language-icons/bootstrap-plain.svg" alt="html" class="w-10">
+                </div>
                 <div class="card-style">
                     <img src="./assets/programming-language-icons/javascript.svg" alt="html" class="w-8">
                     <img src="./assets/programming-language-icons/vue-vuejs-javascript-js-framework.svg" alt="html" class="w-10">
@@ -179,6 +179,81 @@
                             Me</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project">
+    <div class="py-20 lg:py-20 bg-lightBackground dark:bg-darkBackground">
+        <div class="container flex items-center gap-4 lg:gap-0 justify-between flex-wrap">
+            <div data-aos="fade-up" class="w-full ext-slate-500 dark:text-slate-300 order-2 lg:order-1 lg:w-1/2 lg:pr-4 font-mulish space-y-2 text-base ">
+                <h2 class="font-poppins text-xl md:text-2xl font-bold text-dark dark:text-white">Zerdeli.app - Education
+                    Platform</h2>
+                <div>
+                    <h6>Location: Kazakhstan</h6>
+                    <h6>Role: Frontend Developer</h6>
+                </div>
+                <p class="text-justify">
+                    Zerdeli is an innovative education platform aimed at transforming the learning experience for
+                    students in Kazakhstan. Focused on creating a seamless and engaging environment, Zerdeli brings
+                    together educators, learners, and technology in a unified platform.
+                </p>
+
+                <h3 class="font-bold">Tools & Technologies:</h3>
+                <ul class="list-style list-disc list-inside">
+                    <li>Frontend Framework: Vue.js (Composition API)</li>
+                    <li> Styling: Tailwind CSS</li>
+                    <li> State Management: Pinia</li>
+                    <li>Version Control: Git</li>
+                </ul>
+                <p class="text-justify">
+                    As part of the frontend team, I contribute to building responsive, interactive interfaces,
+                    optimizing the user experience, and ensuring smooth functionality across devices.
+                </p>
+            </div>
+            <div data-aos="fade-up" class="order-1 lg:order-2 w-full lg:w-1/2 space-y-4 lg:pl-4"><img
+                    src="./assets/images/zerdeli.png" alt="project-image" class="w-full rounded-4xl">
+                <a href="https://zerdeli.app" target="_blank"
+                   class="bg-primary rounded-lg px-4 py-3 block font-mulish w-32 mx-auto text-white text-center">Live
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="py-20 lg:py-20 bg-lightForeground dark:bg-darkForeground">
+        <div class="container flex items-center gap-4 lg:gap-0 justify-between flex-wrap">
+            <div data-aos="fade-up" class="order-1 lg:order-1 w-full lg:w-1/2 space-y-4 lg:pr-8"><img
+                    src="./assets/images/moonlight-pharmacy.png" alt="project-image" class="w-full rounded-lg">
+                <a href="https://moonlightpharmacy.net/" target="_blank"
+                   class="bg-primary px-4 py-3 rounded-lg block font-mulish w-32 mx-auto text-white text-center">Live
+                    Demo</a>
+            </div>
+            <div data-aos="fade-up"
+                 class="w-full ext-slate-500 dark:text-slate-300 order-2 lg:order-2 lg:w-1/2 lg:pl-4 font-mulish space-y-2 text-base ">
+
+                <h2 class="font-poppins text-xl md:text-2xl font-bold text-dark dark:text-white">Moonlight Pharmacy - Ecommerce</h2>
+                <p class="text-justify">
+                    Moonlight Pharmacy is an online platform for purchasing pharmaceutical products. It allows users to
+                    upload prescription photos, with A-grade pharmacists providing guidance for safe and accurate
+                    purchases.
+                </p>
+
+                <h3 class="font-bold">Tools & Technologies:</h3>
+                <ul class="list-style list-disc list-inside">
+                    <li>Frontend Framework: Vue.js (Composition API)</li>
+                    <li> Styling: Tailwind CSS</li>
+                    <li> State Management: Pinia</li>
+                    <li>API Integration: Axios</li>
+                    <li>Version Control: Git</li>
+                </ul>
+                <p class="text-justify">
+                    In this project, I worked on developing intuitive, responsive interfaces to optimize the shopping
+                    experience, ensuring smooth navigation and seamless purchasing functionality.
+                </p>
+
             </div>
         </div>
     </div>
