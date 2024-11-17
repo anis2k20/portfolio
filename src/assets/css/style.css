@@ -744,6 +744,10 @@ p{
   width: 2.5rem;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .w-8{
   width: 2rem;
 }
@@ -758,18 +762,6 @@ p{
 
 .w-full{
   width: 100%;
-}
-
-.w-1\/2{
-  width: 50%;
-}
-
-.w-16{
-  width: 4rem;
-}
-
-.w-32{
-  width: 8rem;
 }
 
 .flex-shrink-0{
@@ -839,16 +831,16 @@ p{
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .rounded-full{
@@ -857,6 +849,10 @@ p{
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
 }
 
 .border{
@@ -900,6 +896,11 @@ p{
   background-color: rgb(40 87 252 / var(--tw-bg-opacity));
 }
 
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .p-1{
   padding: 0.25rem;
 }
@@ -941,14 +942,6 @@ p{
   padding-top: 1rem;
 }
 
-.pr-4{
-  padding-right: 1rem;
-}
-
-.pl-4{
-  padding-left: 1rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -975,6 +968,11 @@ p{
   line-height: 2.25rem;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -983,16 +981,6 @@ p{
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold{
@@ -1199,6 +1187,11 @@ p{
     padding-right: 2rem;
   }
 
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .lg\:py-36{
     padding-top: 9rem;
     padding-bottom: 9rem;
@@ -1209,17 +1202,20 @@ p{
     padding-bottom: 1rem;
   }
 
-  .lg\:py-20{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .lg\:pl-4{
     padding-left: 1rem;
   }
 
   .lg\:pr-4{
     padding-right: 1rem;
+  }
+
+  .lg\:pr-6{
+    padding-right: 1.5rem;
+  }
+
+  .lg\:pr-8{
+    padding-right: 2rem;
   }
 
   .lg\:text-left{
@@ -1234,11 +1230,6 @@ p{
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .lg\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:leading-\[55px\]{
