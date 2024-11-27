@@ -15,7 +15,7 @@
 <section id="home">
     <!-- navbar -->
     <nav x-data="{isDark: false}"
-         class="bg-lightForeground z-50 dark:bg-darkForeground dark:text-white sticky top-0 flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-4 shadow-light-shadow">
+         class="bg-lightForeground z-50 dark:bg-darkForeground dark:text-white fixed w-full flex items-center justify-between font-poppins px-6 py-3 lg:px-8 lg:py-4 shadow-light-shadow">
         <div class="flex items-center gap-4">
             <div class="border flex items-center justify-center p-1 rounded-full">
                 <button @click="toggleDarkMode(); isDark = !isDark" type="button" class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground" data-hs-theme-click-value="dark">
@@ -48,7 +48,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about-me">About</a></li>
             <li><a href="#project">Project</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <button class="lg:hidden" @click="isOpenMobileNav = true">
@@ -89,7 +89,7 @@
                 </a>
             </li>
             <li @click="isOpenMobileNav = !isOpenMobileNav">
-                <a href="#" class="">
+                <a href="#contact" class="">
                     Contact
                 </a>
             </li>
@@ -98,7 +98,7 @@
 
     <!-- end navbar -->
     <!-- hero -->
-    <div class="flex  flex-wrap space-y-10 justify-between items-center container py-[5%]">
+    <div class="flex  flex-wrap space-y-10 justify-between pt-32 items-center container py-[5%]">
         <div class="w-full flex flex-wrap flex-col-reverse lg:flex-row  gap-10 lg:gap-0 ">
             <div  data-aos="fade-up" data-aos-delay="50"
                   data-aos-duration="1000"
@@ -259,12 +259,56 @@
     </div>
 </section>
 
+<section>
+    <div class="py-20 lg:py-20 bg-lightBackground dark:bg-darkForeground">
+        <h2 class="text-lg font-bold text-center font-poppins">Latest Projects</h2>
+        <p class="text-center text-slate-500 font-mulish pb-6 px-4 dark:text-white">Innovative Solutions, Designed and Delivered</p>
+        <div data-aos="fade-up" data-aos-duration="1000" class="container grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+            <div class="relative w-full bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/scheduler.jpg" alt="project-photo" class="w-full  object-cover border rounded">
+                <h3 class="text-lg relative z-10 text-center font-semibold pt-2">Scheduler Landing Page</h3>
+                <span class="absolute text-4xl  text-gray-200 font-poppins  bottom-1 font-bold">1</span>
+            </div>
+
+            <div class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/pigeonsoft.jpg" alt="project-photo" class="w-full  object-cover border rounded">
+                <h3 class="text-lg  text-center font-semibold pt-2 relative z-10">PigeonSoft Landing Page</h3>
+                <span class="absolute text-4xl text-gray-200 font-poppins   bottom-1 font-bold">2</span>
+            </div>
+
+            <div class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/comming-soon.jpg" alt="project-photo" class="w-full   object-cover border rounded">
+                <h3 class="text-lg relative z-10 text-center font-semibold pt-2">Coming Soon Template</h3>
+                <span class="absolute text-4xl text-gray-200 font-poppins   bottom-1 font-bold">3</span>
+            </div>
+
+            <div class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/sales-wind.jpg" alt="project-photo" class="w-full  object-cover border rounded">
+                <h3 class="text-lg relative z-10 text-center font-semibold pt-2">SalesWind Admin Template</h3>
+                <span class="absolute text-4xl text-gray-200 font-poppins   bottom-1 font-bold">4</span>
+            </div>
+
+            <div class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/mars.jpg" alt="project-photo" class="w-full  object-cover border rounded">
+                <h3 class="text-lg relative z-10 text-center font-semibold pt-2">MARS Admin Dashboard</h3>
+                <span class="absolute text-4xl text-gray-200 font-poppins   bottom-1 font-bold">5</span>
+            </div>
+
+            <div class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow">
+                <img src="./assets/images/salespro.jpg" alt="project-photo" class="w-full  object-cover border rounded">
+                <h3 class="text-lg relative z-10 text-center font-semibold pt-2">SalesPro Admin Dashboard</h3>
+                <span class="absolute text-4xl text-gray-200 font-poppins   bottom-1 font-bold">6</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="contact">
     <div class="py-20 lg:py-20 bg-lightForeground dark:bg-darkBackground" style="border-top: 1px solid #E5E7EB">
         <div class="container space-y-1">
             <h3 class="text-primary text-xl font-medium">Contact</h3>
             <p class="font-mulish">Let’s build stunning web experiences together—drop me a message below! 👇</p>
-            <div class="pt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+            <div data-aos="fade-up" data-aos-duration="1000" class="pt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
                 <!--  email -->
                 <div class="flex gap-4">
                     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-lightForeground shadow-xl border border-slate-200 text-primary">
