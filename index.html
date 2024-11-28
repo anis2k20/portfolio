@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Portfolio</title>
 </head>
-<body class="bg-lightBackground dark:bg-darkBackground dark:text-white transition-colors duration-100" x-data="{isOpenMobileNav: false}">
+<body class="bg-lightBackground dark:bg-darkBackground dark:text-white transition-colors duration-100" x-data="{isOpenMobileNav: false}" x-cloak>
 <section id="home">
     <!-- navbar -->
     <nav x-data="{isDark: false}"
@@ -51,14 +51,14 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button class="lg:hidden" @click="isOpenMobileNav = true">
+        <button x-cloak class="lg:hidden" @click="isOpenMobileNav = true">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M16 5H0V4h16zm0 8H0v-1h16zm0-4.008H0V8h16z"/>
             </svg>
         </button>
     </nav>
     <!-- mobile nav -->
-    <div  class="lg:hidden bg-lightBackground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed  w-full h-screen"
+    <div x-cloak  class="lg:hidden bg-lightBackground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed  w-full h-screen"
           :class="{'left-0': isOpenMobileNav,'-left-[1200px]': !isOpenMobileNav}"
     >
         <div class="absolute cursor-pointer right-5 text-red-600">
