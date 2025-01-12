@@ -18,6 +18,12 @@
     .card-style{
         @apply flex items-center gap-4 px-3 py-3 rounded-xl duration-500 hover:-mt-5 transition-all ease-in-out cursor-pointer hover:bg-lightForeground hover:shadow-light-shadow dark:hover:bg-darkForeground dark:hover:shadow-dark-shadow;
     }
+    .btn{
+        @apply bg-primary text-white px-4 py-2 rounded-md;
+    }
+    .btn-outline{
+        @apply border-2 border-primary text-primary px-4 py-2 rounded-md;
+    }
 
 }
 
