@@ -6,5 +6,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image", "@vueuse/motion/nuxt"],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ["@vue/devtools-core", "@vue/devtools-kit"],
+    },
   },
 });
