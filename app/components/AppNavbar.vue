@@ -1,148 +1,155 @@
 <script setup>
-import { useDark, useToggle } from "@vueuse/core";
+import { ref, onMounted } from "vue";
 
-const { isDark, toggleDarkMode } = useDark();
+const isDark = ref(false);
 const isOpenMobileNav = ref(false);
+
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value;
+  localStorage.setItem("theme", isDark.value ? "dark" : "light");
+  document.documentElement.classList.toggle("dark", isDark.value);
+};
+
+onMounted(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    isDark.value = true;
+    document.documentElement.classList.add("dark");
+  }
+});
 </script>
 
 <template>
-  <nav
-    class="bg-lightForeground z-50 dark:bg-darkForeground dark:text-white py-1 fixed w-full flex items-center justify-between font-poppins px-6 lg:px-8 dark:shadow-dark-shadow shadow-light-shadow"
-  >
-    <div class="flex items-center gap-4">
-      <h1
-        class="py-1 pt-3 leading-[2rem] text-6xl text-[#212121] dark:text-white font-medium font-sunshine"
-      >
-        Anis
-      </h1>
-    </div>
-
-    <ul class="hidden lg:flex font-mulish font-medium items-center gap-6">
-      <li><a href="#home" class="hover:text-primary duration-200">Home</a></li>
-      <li>
-        <a href="#about-me" class="hover:text-primary duration-200">About Me</a>
-      </li>
-      <li>
-        <a href="#project" class="hover:text-primary duration-200">Projects</a>
-      </li>
-      <li>
-        <a href="#contact" class="hover:text-primary duration-200">Contact</a>
-      </li>
-      <li>
-        <div class="border flex items-center justify-center p-1 rounded-full">
-          <button
-            @click="
-              toggleDarkMode();
-              isDark = !isDark;
-            "
-            type="button"
-            class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground"
-            data-hs-theme-click-value="dark"
-          >
-            <span
-              x-show="!isDark"
-              class="group inline-flex shrink-0 justify-center items-center size-9"
-            >
-              <svg
-                class="shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-              </svg>
-            </span>
-          </button>
-          <button
-            @click="
-              toggleDarkMode();
-              isDark = !isDark;
-            "
-            type="button"
-            class="font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-            data-hs-theme-click-value="light"
-          >
-            <span
-              x-show="isDark"
-              class="group inline-flex shrink-0 justify-center items-center size-9"
-            >
-              <svg
-                class="shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2"></path>
-                <path d="M12 20v2"></path>
-                <path d="m4.93 4.93 1.41 1.41"></path>
-                <path d="m17.66 17.66 1.41 1.41"></path>
-                <path d="M2 12h2"></path>
-                <path d="M20 12h2"></path>
-                <path d="m6.34 17.66-1.41 1.41"></path>
-                <path d="m19.07 4.93-1.41 1.41"></path>
-              </svg>
-            </span>
-          </button>
-        </div>
-      </li>
-    </ul>
-
-    <button x-cloak class="lg:hidden" @click="isOpenMobileNav = true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1.5em"
-        height="1.5em"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill="currentColor"
-          d="M16 5H0V4h16zm0 8H0v-1h16zm0-4.008H0V8h16z"
-        />
-      </svg>
-    </button>
-  </nav>
-  <!-- mobile nav :class="{'left-0': isOpenMobileNav,'-left-[1200px]': !isOpenMobileNav}" -->
   <div
-    x-cloak
-    class="lg:hidden bg-lightForeground dark:bg-darkBackground dark:text-white duration-200 font-poppins text-xl font-medium top-0 p-6 z-50 fixed w-full h-screen"
-    x-show="isOpenMobileNav"
-    x-transition:enter="transition ease-out duration-300 transform"
-    x-transition:enter-start="opacity-0 scale-90"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-300 transform"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-90"
+    class="z-50 bg-lightForeground py-2 dark:bg-darkForeground dark:text-white"
   >
-    <div class="flex justify-between items-center">
-      <div class="border flex items-center justify-center p-1 rounded-full">
+    <nav
+      class="dark:shadow-dark-shadow shadow-light-shadow container flex w-full items-center justify-between px-6 py-1 font-poppins lg:px-8"
+    >
+      <div class="flex items-center gap-4">
+        <h1
+          class="py-1 pt-3 font-sunshine text-6xl leading-8 font-medium text-dark dark:text-white"
+        >
+          Anis
+        </h1>
+      </div>
+
+      <ul class="hidden items-center gap-6 font-mulish font-medium lg:flex">
+        <li>
+          <a href="#home" class="duration-200 hover:text-primary">Home</a>
+        </li>
+        <li>
+          <a href="#about-me" class="duration-200 hover:text-primary"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a href="#project" class="duration-200 hover:text-primary"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="duration-200 hover:text-primary">Contact</a>
+        </li>
+        <li>
+          <div class="flex items-center justify-center rounded-full border p-1">
+            <button
+              @click="toggleDarkMode"
+              type="button"
+              class="cursor-pointer rounded-full font-medium text-dark hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground"
+              data-hs-theme-click-value="dark"
+            >
+              <span
+                v-show="!isDark"
+                class="group inline-flex size-9 shrink-0 items-center justify-center"
+              >
+                <svg
+                  class="size-4 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              </span>
+            </button>
+            <button
+              @click="toggleDarkMode"
+              type="button"
+              class="cursor-pointer rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+              data-hs-theme-click-value="light"
+            >
+              <span
+                v-show="isDark"
+                class="group inline-flex size-9 shrink-0 items-center justify-center"
+              >
+                <svg
+                  class="size-4 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <button class="lg:hidden" @click="isOpenMobileNav = true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5em"
+          height="1.5em"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill="currentColor"
+            d="M16 5H0V4h16zm0 8H0v-1h16zm0-4.008H0V8h16z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+  <div
+    class="fixed top-0 z-50 h-screen w-full bg-lightForeground p-6 font-poppins text-xl font-medium duration-200 lg:hidden dark:bg-darkBackground dark:text-white"
+    v-show="isOpenMobileNav"
+  >
+    <div class="flex items-center justify-between">
+      <div class="flex items-center justify-center rounded-full border p-1">
         <button
-          @click="
-            toggleDarkMode();
-            isDark = !isDark;
-          "
+          @click="toggleDarkMode"
           type="button"
-          class="font-medium text-dark rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground"
+          class="rounded-full font-medium text-dark hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-white dark:hover:bg-darkBackground dark:focus:bg-darkBackground"
           data-hs-theme-click-value="dark"
         >
           <span
-            x-show="!isDark"
-            class="group inline-flex shrink-0 justify-center items-center size-9"
+            v-show="!isDark"
+            class="group inline-flex size-9 shrink-0 items-center justify-center"
           >
             <svg
-              class="shrink-0 size-4"
+              class="size-4 shrink-0"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -158,20 +165,17 @@ const isOpenMobileNav = ref(false);
           </span>
         </button>
         <button
-          @click="
-            toggleDarkMode();
-            isDark = !isDark;
-          "
+          @click="toggleDarkMode"
           type="button"
-          class="font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+          class="rounded-full font-medium text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
           data-hs-theme-click-value="light"
         >
           <span
-            x-show="isDark"
-            class="group inline-flex shrink-0 justify-center items-center size-9"
+            v-show="isDark"
+            class="group inline-flex size-9 shrink-0 items-center justify-center"
           >
             <svg
-              class="shrink-0 size-4"
+              class="size-4 shrink-0"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -212,7 +216,7 @@ const isOpenMobileNav = ref(false);
         </svg>
       </button>
     </div>
-    <ul class="flex items-center justify-center pt-20 flex-col gap-4">
+    <ul class="flex flex-col items-center justify-center gap-4 pt-20">
       <li @click="isOpenMobileNav = !isOpenMobileNav">
         <a href="#home" class=""> Home </a>
       </li>

@@ -1,23 +1,19 @@
 <template>
   <section id="contact">
     <div
-      class="py-20 lg:py-20 bg-lightForeground dark:bg-darkBackground"
-      style="border-top: 1px solid #e5e7eb"
+      class="bg-lightForeground py-20 lg:py-20 dark:bg-darkForeground"
     >
-      <div class="container space-y-1">
-        <h3 class="text-primary text-xl font-medium">Contact</h3>
+      <div class="container space-y-1 dark:text-white">
+        <h3 class="text-xl font-medium text-primary">Contact</h3>
         <p class="font-mulish text-base">
           Let’s build stunning web experiences together—drop me a message below!
           👇
         </p>
-        <div
-         
-          class="pt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-4"
-        >
+        <div class="grid gap-4 pt-10 md:grid-cols-2 lg:grid-cols-3">
           <!--  email -->
           <div class="flex gap-4">
             <div
-              class="w-12 h-12 flex items-center justify-center rounded-full bg-lightForeground shadow-xl border border-slate-200 text-primary"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-lightForeground text-primary shadow-xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +41,7 @@
           <!--  whatsapp -->
           <div class="flex gap-4 lg:justify-center">
             <div
-              class="w-12 h-12 flex items-center justify-center rounded-full bg-lightForeground shadow-xl border border-slate-200 text-slate-400"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-lightForeground text-slate-400 shadow-xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +100,7 @@
           <!--  facebook -->
           <div class="flex gap-4 lg:justify-end">
             <div
-              class="w-12 h-12 flex items-center justify-center rounded-full bg-lightForeground shadow-xl border border-slate-200 text-slate-400"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-lightForeground text-slate-400 shadow-xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,31 +1,29 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <!-- About Me -->
-  <section
-    id="about-me"
-  >
-    <div class="py-20 lg:py-36 bg-lightForeground dark:bg-darkForeground">
-      <div class="container">
-        <div class="flex justify-between flex-wrap md:flex-nowrap gap-10">
+  <section id="about-me">
+    <div
+      class=" overflow-hidden bg-lightForeground py-20 lg:py-36 dark:bg-darkForeground"
+    >
+ 
+      <div class=" container">
+        <div class="flex flex-wrap justify-between gap-10 md:flex-nowrap">
           <div
-            class="w-80 z-10 mx-auto shrink-0 border-double border-4 rounded-lg h-80 relative border-slate-400"
+            class="relative z-10 mx-auto h-80 w-80 shrink-0 rounded-lg border-4 border-double border-slate-400"
           >
             <img
-              class="absolute left-1/2 z-10 -translate-x-1/2 bottom-0 h-96 rounded-lg"
+              class="absolute bottom-0 left-1/2 z-10 h-96 -translate-x-1/2 rounded-lg"
               src="@/assets/images/about-me.webp"
               alt=""
             />
           </div>
 
-          <div
-            class="space-y-4 text-center md:text-left"
-          >
+          <div class="space-y-4 text-center md:text-left">
             <div
-              class="text-dark dark:text-white text-xl md:text-3xl font-poppins font-bold"
+              class="font-poppins text-xl font-bold text-dark md:text-3xl dark:text-white"
             >
-              <p class="text-primary font-medium font-poppins text-lg">
+              <p class="font-poppins text-lg font-medium text-primary">
                 ABOUT ME
               </p>
               <span>Front-end Developer based in Dhaka, Bangladesh </span>
@@ -45,16 +43,16 @@
               needs and business goals.
             </p>
             <div
-              class="flex pt-4 justify-center md:justify-start gap-4 font-medium font-mulish"
+              class="flex justify-center gap-4 pt-4 font-mulish font-medium md:justify-start"
             >
               <!-- <a href="./assets/pdf/front-end-cv.pdf" class="btn">Download -->
               <!--     CV</a> -->
               <a
                 href="@/assets/pdf/AnisMiaResume.pdf"
-                class="rounded px-5 py-2.5 overflow-hidden group bg-primary relative hover:bg-gradient-to-r hover:from-primary hover:to-blue-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300"
+                class="group relative overflow-hidden rounded bg-primary px-5 py-2.5 text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-primary hover:to-blue-400 hover:ring-2 hover:ring-primary hover:ring-offset-2"
               >
                 <span
-                  class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white dark:bg-darkBackground opacity-10 rotate-12 group-hover:-translate-x-40 ease"
+                  class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40 dark:bg-darkBackground"
                 ></span>
                 <span class="relative">Download CV</span>
               </a>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sunshine:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sunshine:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
 @import "./custom.css";
@@ -7,43 +7,41 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    /* Colors */
-    --color-lightBackground: #f9f9f9;
-    --color-lightForeground: #ffffff;
-    --color-darkBackground: #1E1E1E;
-    --color-darkForeground: #0F0F0F;
-    --color-dark: #212121;
-    --color-primary: #2857FC;
+  /* Colors */
+  --color-lightBackground: #f9f9f9;
+  --color-lightForeground: #ffffff;
+  --color-darkBackground: #1e1e1e;
+  --color-darkForeground: #0f0f0f;
+  --color-dark: #212121;
+  --color-primary: #2857fc;
 
-    /* Shadows */
-    --shadow-light: 0 0 10px rgba(0, 0, 0, 0.09);
-    --shadow-dark: 0 0 20px rgba(255, 255, 255, 0.09);
+  /* Shadows */
+  --shadow-light: 0 0 10px rgba(0, 0, 0, 0.09);
+  --shadow-dark: 0 0 20px rgba(255, 255, 255, 0.09);
 
-    /* Fonts */
-    --font-mulish: 'Mulish', sans-serif;
-    --font-poppins: 'Poppins', sans-serif;
-    --font-sunshine: 'Sunshine', sans-serif;
+  /* Fonts */
+  --font-mulish: "Mulish", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-sunshine: "Sunshine", sans-serif;
 }
 
 @layer utilities {
-    button{
-        @apply outline-none;
-    }
-    p{
-        @apply font-mulish text-lg;
-
-    }
-    .container{
-        @apply max-w-287.5 mx-auto px-6;
-    }
-    .card-style{
-        @apply flex items-center gap-4 px-3 py-3 rounded-xl duration-500 hover:-mt-5 transition-all ease-in-out cursor-pointer ;
-    }
-    .btn{
-        @apply bg-primary text-white px-4 py-2 rounded-md;
-
-    }
-    .btn-outline{
-        @apply border-2 border-primary text-primary px-4 py-2 rounded-md;
-    }
+  button {
+    @apply outline-none;
+  }
+  p {
+    @apply font-mulish text-lg;
+  }
+  .container {
+    @apply mx-auto max-w-287.5 px-6;
+  }
+  .card-style {
+    @apply flex cursor-pointer items-center gap-4 rounded-xl px-3 py-3 transition-all duration-500 ease-in-out hover:-mt-5;
+  }
+  .btn {
+    @apply rounded-md bg-primary px-4 py-2 text-white;
+  }
+  .btn-outline {
+    @apply rounded-md border-2 border-primary px-4 py-2 text-primary;
+  }
 }

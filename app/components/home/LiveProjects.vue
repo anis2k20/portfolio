@@ -1,14 +1,14 @@
 <template>
   <section id="project">
-    <div class="py-20 lg:py-20 bg-lightBackground dark:bg-darkBackground">
+    <div class="bg-lightBackground py-20 lg:py-20 dark:bg-darkBackground">
       <div
-        class="container flex items-center gap-4 lg:gap-0 justify-between flex-wrap"
+        class="container flex flex-wrap items-center justify-between gap-4 lg:gap-0"
       >
         <div
-          class="w-full ext-slate-500 dark:text-slate-300 order-2 lg:order-1 lg:w-1/2 lg:pr-4 font-mulish space-y-2 text-base"
+          class="ext-slate-500 order-2 w-full space-y-2 font-mulish text-base lg:order-1 lg:w-1/2 lg:pr-4 dark:text-slate-300"
         >
           <h2
-            class="font-poppins text-xl md:text-2xl font-bold text-dark dark:text-white"
+            class="font-poppins text-xl font-bold text-dark md:text-2xl dark:text-white"
           >
             Zerdeli.app - Education Platform
           </h2>
@@ -24,7 +24,7 @@
 
           <h3 class="font-bold">Tools & Technologies:</h3>
           <ul
-            class="list-style list-disc list-inside text-base text-slate-600 dark:text-slate-300"
+            class="list-style list-inside list-disc text-base text-slate-600 dark:text-slate-300"
           >
             <li>Frontend Framework: Vue.js (Composition API)</li>
             <li>Styling: Tailwind CSS</li>
@@ -37,7 +37,7 @@
             functionality across devices.
           </p>
         </div>
-        <div class="order-1 lg:order-2 w-full lg:w-1/2 space-y-4 lg:pl-4">
+        <div class="order-1 w-full space-y-4 lg:order-2 lg:w-1/2 lg:pl-4">
           <img
             src="@/assets/images/zerdeli.png"
             alt="project-image"
@@ -57,11 +57,11 @@
   </section>
 
   <section>
-    <div class="py-20 lg:py-20 bg-lightForeground dark:bg-darkForeground">
+    <div class="bg-lightForeground py-20 lg:py-20 dark:bg-darkForeground">
       <div
-        class="container flex items-center gap-4 lg:gap-0 justify-between flex-wrap"
+        class="container flex flex-wrap items-center justify-between gap-4 lg:gap-0"
       >
-        <div class="order-1 lg:order-1 w-full lg:w-1/2 space-y-4 lg:pr-8">
+        <div class="order-1 w-full space-y-4 lg:order-1 lg:w-1/2 lg:pr-8">
           <img
             src="@/assets/images/moonlight-pharmacy.png"
             alt="project-image"
@@ -77,10 +77,10 @@
           </div>
         </div>
         <div
-          class="w-full ext-slate-500 dark:text-slate-300 order-2 lg:order-2 lg:w-1/2 lg:pl-4 font-mulish space-y-2 text-base"
+          class="ext-slate-500 order-2 w-full space-y-2 font-mulish text-base lg:order-2 lg:w-1/2 lg:pl-4 dark:text-slate-300"
         >
           <h2
-            class="font-poppins text-xl md:text-2xl font-bold text-dark dark:text-white"
+            class="font-poppins text-xl font-bold text-dark md:text-2xl dark:text-white"
           >
             Moonlight Pharmacy - Ecommerce
           </h2>
@@ -91,9 +91,9 @@
             accurate purchases.
           </p>
 
-          <h3 class="font-bold text-base">Tools & Technologies:</h3>
+          <h3 class="text-base font-bold">Tools & Technologies:</h3>
           <ul
-            class="list-style list-disc list-inside text-base text-slate-600 dark:text-slate-300"
+            class="list-style list-inside list-disc text-base text-slate-600 dark:text-slate-300"
           >
             <li>Frontend Framework: Vue.js (Composition API)</li>
             <li>Styling: Tailwind CSS</li>

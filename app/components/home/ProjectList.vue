@@ -1,116 +1,113 @@
 <template>
   <section>
-    <div class="py-20 lg:py-20 bg-lightBackground dark:bg-darkForeground">
-      <h2 class="text-lg font-bold text-center font-poppins">
+    <div class="bg-lightBackground py-20 lg:py-20 dark:bg-darkBackground">
+      <h2 class="text-center font-poppins text-lg font-bold dark:text-white">
         Latest Projects
       </h2>
       <p
-        class="text-center text-slate-600 font-mulish pb-6 px-4 dark:text-white text-base"
+        class="px-4 pb-6 text-center font-mulish text-base text-slate-600 dark:text-white"
       >
         Innovative Solutions, Designed and Delivered
       </p>
-      <div
-        
-        class="container grid lg:grid-cols-3 md:grid-cols-2 gap-4"
-      >
+      <div class="container grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div
-          class="relative w-full bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/scheduler.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg relative z-10 text-center font-semibold pt-2">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             Scheduler Landing Page
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >1</span
           >
         </div>
 
         <div
-          class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/pigeonsoft.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg text-center font-semibold pt-2 relative z-10">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             Techwix Landing Page
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >2</span
           >
         </div>
 
         <div
-          class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/comming-soon.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg relative z-10 text-center font-semibold pt-2">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             Coming Soon Template
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >3</span
           >
         </div>
 
         <div
-          class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/sales-wind.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg relative z-10 text-center font-semibold pt-2">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             SalesWind Admin Template
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >4</span
           >
         </div>
 
         <div
-          class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/mars.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg relative z-10 text-center font-semibold pt-2">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             MARS Admin Dashboard
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >5</span
           >
         </div>
 
         <div
-          class="w-full relative bg-white rounded-lg p-3 shadow-light-shadow"
+          class="shadow-light-shadow relative w-full rounded-lg bg-white p-3"
         >
           <img
             src="@/assets/images/salespro.jpg"
             alt="project-photo"
-            class="w-full object-cover border rounded"
+            class="w-full rounded border object-cover"
           />
-          <h3 class="text-lg relative z-10 text-center font-semibold pt-2">
+          <h3 class="relative z-10 pt-2 text-center text-lg font-semibold">
             SalesPro Admin Dashboard
           </h3>
           <span
-            class="absolute text-4xl text-gray-200 font-poppins bottom-1 font-bold"
+            class="absolute bottom-1 font-poppins text-4xl font-bold text-gray-200"
             >6</span
           >
         </div>
