@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sunshine:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
 
 @import "tailwindcss";
 @import "./custom.css";
@@ -23,6 +24,7 @@
   --font-mulish: "Mulish", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-sunshine: "Sunshine", sans-serif;
+  --font-bungee: "Bungee Outline", sans-serif;
 }
 
 @layer utilities {

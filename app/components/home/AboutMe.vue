@@ -7,6 +7,7 @@
       class="overflow-hidden bg-lightForeground py-20 lg:py-36 dark:bg-darkForeground"
     >
       <div class="container">
+        <h2 class="font-bungee text-9xl text-gray-200 dark:text-gray-700">About Me</h2>
         <div class="flex flex-wrap justify-between gap-10 md:flex-nowrap">
           <MotionGroup preset="slideVisibleLeft" :duration="1000">
           <div
@@ -20,13 +21,13 @@
           </div>
           </MotionGroup>
           <MotionGroup preset="slideVisibleRight" :duration="1000">
-            <div class="space-y-4 text-center md:text-left">
+            <div class="space-y-3.5 text-center md:text-left">
               <div
                 class="font-poppins text-xl font-bold text-dark md:text-3xl dark:text-white"
               >
-                <p class="font-poppins text-lg font-medium text-primary">
+                <!-- <p class="font-poppins text-lg font-medium text-primary">
                   ABOUT ME
-                </p>
+                </p> -->
                 <span>Front-end Developer based in Dhaka, Bangladesh </span>
               </div>
               <p

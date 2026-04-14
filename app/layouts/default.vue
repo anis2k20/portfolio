@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MouseCursor />
     <AppNavbar />
     <slot />
     <AppFooter />
